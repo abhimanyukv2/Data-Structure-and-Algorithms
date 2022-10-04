@@ -16,6 +16,20 @@ def duplicateElement1(arr):
         ans = ans^i
     print(i)
 
+def findDuplicates(self, nums: list[int]) -> list[int]:
+    dic = {}
+    for i in nums:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i] = 1
+    arr = []
+    for i in dic:
+        if dic[i] > 1:
+            arr.append(i)
+    arr.sort()
+    return arr
+
 def printArray(arr):
     print(*arr)
 
