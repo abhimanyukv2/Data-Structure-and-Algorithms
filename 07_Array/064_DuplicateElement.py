@@ -8,7 +8,13 @@ def duplicateElement(arr):
             duplicateElements.append(i)
     printArray(duplicateElements)
 
-
+def duplicateElement1(arr):
+    ans = 0
+    for i in arr:
+        ans = ans^i
+    for i in range(1,len(arr)):
+        ans = ans^i
+    print(i)
 
 def printArray(arr):
     print(*arr)
@@ -17,3 +23,4 @@ size = int(input())
 arr = list(map(int,input().split()))
 
 duplicateElement(arr)
+duplicateElement1(arr)
