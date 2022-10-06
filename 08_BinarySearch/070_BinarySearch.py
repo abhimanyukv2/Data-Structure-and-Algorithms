@@ -1,17 +1,18 @@
+from operator import index
 def binarySearch(arr,size,key):
     start = 0
     end = size - 1
-    mid = (start+end)//2
+    mid = start + (end-start)//2
 
     while start<=end:
         if arr[mid] == key:
             return mid
         if key > arr[mid]:
             start = mid + 1
-            mid = (start + end)//2
+            mid = start + (end-start)//2
         else:
             end = mid - 1
-            mid = (start + end)//2
+            mid = start + (end-start)//2
     return -1
 
 if __name__ == "__main__":
