@@ -19,6 +19,12 @@ class Solution:
             return False
         return True
 
+from collections import Counter
+class Solution:
+    def uniqueOccurrences(self, arr: list[int]) -> bool:
+        myDict = Counter(arr)
+        print(myDict)
+        return len(myDict.values()) == len(set(myDict.values()))
 
 # Driver Code
 if __name__ == "__main__":
