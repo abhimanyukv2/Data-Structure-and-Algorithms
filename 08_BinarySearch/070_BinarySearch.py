@@ -1,4 +1,3 @@
-from operator import index
 def binarySearch(arr,size,key):
     start = 0
     end = size - 1
