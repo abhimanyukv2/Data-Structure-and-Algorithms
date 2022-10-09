@@ -8,7 +8,7 @@ arr[0] < arr[1] < ... < arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length 
 You must solve it in O(log(arr.length)) time complexity.'''
 
 class Solution1:
-    def peakIndexInMountainArray(self, arr: list[int]) -> int:
+    def peakIndexInMountainArray(self, arr: list[int]):
         '''This is Linear Search approach
         Time complexity O(n)'''
         for i in range(len(arr)-1):
