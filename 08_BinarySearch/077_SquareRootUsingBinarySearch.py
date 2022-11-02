@@ -5,6 +5,7 @@ Is N is not a perfect square, then return floor value of sqrt(N).'''
 def sqrtN(n):
     start = 0
     end = n
+    ans = 0
 
     while start <= end:
         mid = start + (end - start)//2
@@ -12,12 +13,14 @@ def sqrtN(n):
         # print(mid)
         if square == n:
             return mid
-        elif square < n and (mid+1)**2 > n:
-            return mid
+        elif square < n:
+            ans = mid
+            start = mid + 1
         elif square < n:
             start = mid + 1
         elif square > n:
             end = mid - 1
+    return ans
 
 if __name__ == "__main__":
     testCase = int(input())
